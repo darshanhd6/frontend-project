@@ -1,0 +1,16 @@
+import React from 'react';
+import BaseNode from './BaseNode';
+
+export const NewNode = ({ id, data }) => {
+  const content = {
+    title: "New Node",
+    body: "This is a new custom node."
+  };
+
+  const handles = [
+    { id: 'input', type: 'target', position: Position.Left },
+    { id: 'output', type: 'source', position: Position.Right },
+  ];
+
+  return <BaseNode id={id} data={data} content={content} handles={handles} />;
+};
